@@ -8,7 +8,7 @@
 
 某些关键章节的标题附近有一个徽章，就像这样：[<span class="badge badge-info">5755f03</span>](https://github.com/Andy-K-Sparklight/MyMCL/tree/5755f038624bea0c015cb183cbba547a76b5df2e)
 
-单击这些徽章可以转到仓库中对应于此章节的 commit。
+单击这些徽章可以转到启动器代码仓库中对应于此章节进度的 commit。
 
 MyMCL（启动器的名字）是用 Node.js 开发的，由于许多人说 Electron 太大了（真是难为本小马……），本教程在后面的 GUI 部分采用了两种实现，除了 Electron，还介绍了 Express 的用法。后者以用户的浏览器为 GUI。
 
