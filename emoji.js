@@ -6,7 +6,7 @@ function (hook, vm){
 	hook.beforeEach(function (content){
 	var c = content;
 		for (var em of Object.entries(AllPonyEmoji.entries)){
-			c = replaceAll(c,em[0],em[1]);
+			c = replaceAll(c,em[0],"<img width='80' height='72' href='"+em[1]+"'></img>);
 		}
 	return c;
 	})
