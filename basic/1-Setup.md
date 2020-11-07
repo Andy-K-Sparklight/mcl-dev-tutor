@@ -4,9 +4,7 @@
 
 1. 前往 [Node.js 官网](https://nodejs.org) 获取Node.js。选择适合你的系统的软件包，运行即可。
 
-   <div class='alert alert-info'><i class='fa fa-rocket'></i> 如果官方站访问速度太慢，请考虑 <a class='alert-link' href='http://nodejs.cn' target='_blank'>镜像网站</a></div>
+   {bsa info <i class='fa fa-rocket'></i> 如果官方站访问速度太慢，请考虑 <a class='alert-link' href='http://nodejs.cn' target='_blank'>镜像网站</a>}
 
-   <div class='alert alert-info'><i class='fa fa-hand-paper'></i> 需要帮助？可以参考 <a class='alert-link' href='https://www.runoob.com/nodejs/nodejs-install-setup.html' target='_blank'>这里</a></div>
-
-{bsa secondary hello mother fucker}
+   {bsa info <i class='fa fa-hand-paper'></i> 需要帮助？可以参考 <a class='alert-link' href='https://www.runoob.com/nodejs/nodejs-install-setup.html' target='_blank'>这里</a>}
 

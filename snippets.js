@@ -7,11 +7,9 @@ window.$docsify.plugins.push(function (hook, vm) {
 });
 function parseBSAlert(html) {
   var hb = html;
-  console.log(hb);
   var BSAlertRegex = /{bsa (success|info|warning|danger|primary|secondary|dark|light)+ [^}]*}/g;
   var all = html.match(BSAlertRegex);
   if (all) {
-    console.log(all);
     for (var i = 0; i < all.length; i++) {
       var typeRegex = /(?<=\{bsa )(success|info|warning|danger|primary|secondary|dark|light)/g;
       var textRegex = /(?<=\{bsa (success|info|warning|danger|primary|secondary|dark|light) )[^\}]*(?=\})/g;
@@ -20,8 +18,6 @@ function parseBSAlert(html) {
       var res = `<div class="alert alert-${type[0] || ""}">${
         text[0] || ""
       }</div>`;
-      console.log(res);
-      console.log("Replaced " + all[i] + " to " + res);
       hb = hb.replace(all[i], res);
     }
   }
