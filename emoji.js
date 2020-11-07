@@ -8,8 +8,8 @@ var AllPonyEmoji = [
 ];
 if(!window.$docsify.plugins){window.$docsify.plugins=[]}
 window.$docsify.plugins.push(function (hook, vm) {
-  hook.beforeEach(function (content,next) {
-    var c = content;
+  hook.afterEach(function (html,next) {
+    var c = html;
     for (var em of AllPonyEmoji) {
         c=c.replace(em.key, `<img width='${em.width}' height='${em.height}' href='${em.url}'></img>`)
      }
