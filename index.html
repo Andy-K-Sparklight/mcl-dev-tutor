@@ -11,6 +11,7 @@
 <body>
   <div id="app"></div>
   <script>
+	  if (window.location.pathname == "/" || window.location.pathname.endsWith("#/") || window.location.pathname.endsWith("?id=/")){open("//"+window.location.host+"/#/README","_self");}
     window.$docsify = {
       plugins:[],
       name: '<span style="font-size: 2.2rem;"><b>MCL Primer Plus</b></span><br /><span style="font-size: 1.2rem;">Minecraft 启动器开发教程</span>',
