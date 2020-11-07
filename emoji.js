@@ -6,13 +6,18 @@ var AllPonyEmoji = [
     height: 72,
   },
 ];
-if(!window.$docsify.plugins){window.$docsify.plugins=[]}
+if (!window.$docsify.plugins) {
+  window.$docsify.plugins = [];
+}
 window.$docsify.plugins.push(function (hook, vm) {
-  hook.afterEach(function (html,next) {
+  hook.afterEach(function (html, next) {
     var c = html;
     for (var em of AllPonyEmoji) {
-        c=c.replace(em.key, `<img width='${em.width}' height='${em.height}' href='${em.url}'></img>`)
-     }
-    next(c)
+      c = c.replace(
+        em.key,
+        `<img width='${em.width}' height='${em.height}' src='${em.url}'></img>`
+      );
+    }
+    next(c);
   });
 });
