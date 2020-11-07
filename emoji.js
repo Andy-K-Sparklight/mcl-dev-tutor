@@ -1,28 +1,18 @@
 var AllPonyEmoji = [
   {
-    key: "ts-think",
+    key: /ts-think/g,
     url: "https://www.picbed.cn/images/2020/11/06/ts_think.png",
     width: 80,
     height: 72,
   },
 ];
+if(!window.$docsify.plugins){window.$docsify.plugins=[]}
 window.$docsify.plugins.push(function (hook, vm) {
-  hook.beforeEach(function (content) {
+  hook.beforeEach(function (content,next) {
     var c = content;
     for (var em of AllPonyEmoji) {
-      c = replaceAll(
-        c,
-        "&" + em.key,
-        `<img width='${em.width}' height='${em.height}' href='${em.url}'></img>`
-      );
-    }
-    return c;
+        c=c.replace(em.key, `<img width='${em.width}' height='${em.height}' href='${em.url}'></img>`)
+     }
+    next(c)
   });
 });
-function replaceAll(origin, s, j) {
-  if (s in origin.replace(s, j)) {
-    return replaceAll(origin.replace(s, j), s, j);
-  } else {
-    return origin.replace(s, j);
-  }
-}
