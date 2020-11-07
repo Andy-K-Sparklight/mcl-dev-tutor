@@ -11,38 +11,12 @@
 </head>
 <body>
   <div id="app"></div>
-  <script>function replaceAll(origin, s, j) {
-  if (s in origin.replace(s, j)) {
-    return replaceAll(origin.replace(s, j), s, j);
-  } else {
-    return origin.replace(s, j);
-  }
-}var AllPonyEmoji = [
-  {
-    key: "ts-think",
-    url: "https://www.picbed.cn/images/2020/11/06/ts_think.png",
-    width: 80,
-    height: 72,
-  },
-];
+  <script>
     window.$docsify = {
-      plugins: [function (hook, vm) {
-  hook.beforeEach(function (content) {
-    var c = content;
-    for (var em of AllPonyEmoji) {
-      c = replaceAll(
-        c,
-        "&" + em.key,
-        `<img width='${em.width}' height='${em.height}' href='${em.url}'></img>`
-      );
-    }
-    return c;
-  });}],
       name: '<span style="font-size: 2.2rem;"><b>MCL Primer Plus</b></span><br /><span style="font-size: 1.2rem;">Minecraft 启动器开发教程</span>',
       loadSidebar: true,
 	  themeColor: "#df307f",
 	  externalLinkTarget: '_blank',
-	  search: 'auto',
 	  
     }
   </script>
@@ -52,7 +26,6 @@
   <script src="//cdn.staticfile.org/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <script src="//cdn.jsdelivr.net/gh/Andy-K-Sparklight/mcl-dev-tutor@main/emoji.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 </html>
